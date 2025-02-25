@@ -55,15 +55,15 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-16">
-      <div className="rounded-lg bg-[#fffe55] p-8 md:p-12">
-        <h2 className="mb-12 text-center text-4xl font-normal tracking-tight md:text-5xl lg:text-6xl">
+    <div className="mx-auto max-w-4xl px-4 py-[90px] ">
+      <div className="rounded-lg bg-[#fffe55] p-8 md:p-12 relative">
+        <h2 className="mb-12 text-center text-4xl font-normal tracking-tight md:text-5xl lg:text-6xl absolute -top-14 left-1/2 -translate-x-1/2">
           Discuss
           <br />
           the project
         </h2>
 
-        <form onSubmit={handleSubmit} className="mx-auto max-w-2xl space-y-8">
+        <form onSubmit={handleSubmit} className="mx-auto max-w-2xl space-y-8 mt-[56px]">
           <div className="space-y-1">
             <input
               type="text"

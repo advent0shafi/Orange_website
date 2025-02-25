@@ -23,14 +23,14 @@ export default function SectionH1() {
               <h1 className="text-4xl text-center md:text-6xl lg:text-7xl font-montreal font-medium text-white mb-6">
                 <span className="text-yellow-300">Nobody</span>
                 <br />
-                doesn't look
+                doesn&apos;t look
                 <br />
                 advertising
               </h1>
               <p className="text-lg md:text-sm text-center font-montreal text-gray-200 mb-8">
-                People watch what they're interested in.
+                People watch what they&apos;re interested in.
                 <br />
-                And only sometimes it's advertising.
+                And only sometimes it&apos;s advertising.
               </p>
               <div className="flex flex-col justify-center items-center">
                 <Link
