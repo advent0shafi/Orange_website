@@ -26,17 +26,17 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      initial={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
+      initial={{ backgroundColor: "rgba(255, 255, 255, 0)" }}
       animate={{
-        backgroundColor: scrolled ? "rgba(0, 0, 0, 0.9)" : "rgba(0, 0, 0, 0)",
+        backgroundColor: scrolled ? "rgba(255, 255, 255, 0.9)" : "rgba(255, 255, 255, 0)",
         backdropFilter: scrolled ? "blur(10px)" : "blur(0px)",
         y: visible ? 0 : -100,
       }}
       transition={{ duration: 0.3 }}
-      className="fixed top-0 z-50 w-full border-b border-white/10"
+      className="fixed top-0 z-50 w-full border-b border-gray-200/20"
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 md:px-6">
-        <Link href="/" className="text-2xl font-light tracking-wide text-white">
+        <Link href="/" className="text-2xl font-light tracking-wide text-gray-800">
           <Image src="/logo.png" alt="logo" width={100} height={100} />
         </Link>
 
@@ -44,31 +44,31 @@ export default function Navbar() {
         <div className="hidden items-center space-x-8 md:flex">
           <Link
             href="/"
-            className="group flex items-center text-sm text-white/90 transition-colors hover:text-white"
+            className="group flex items-center text-sm text-gray-600 transition-colors hover:text-gray-900"
           >
             HOME
           </Link>
           <Link
-            href="/pages"
-            className="text-sm text-white/90 transition-colors hover:text-white"
+            href="/about"
+            className="text-sm text-gray-600 transition-colors hover:text-gray-900"
           >
-            PAGES
+            ABOUT
           </Link>
           <Link
             href="/projects"
-            className="text-sm text-white/90 transition-colors hover:text-white"
+            className="text-sm text-gray-600 transition-colors hover:text-gray-900"
           >
             PROJECTS
           </Link>
           <Link
             href="/blog"
-            className="text-sm text-white/90 transition-colors hover:text-white"
+            className="text-sm text-gray-600 transition-colors hover:text-gray-900"
           >
             BLOG
           </Link>
           <Link
             href="/contact"
-            className="text-sm text-white/90 transition-colors hover:text-white"
+            className="text-sm text-gray-600 transition-colors hover:text-gray-900"
           >
             CONTACT
           </Link>
@@ -79,7 +79,7 @@ export default function Navbar() {
           {/* Social icons remain the same */}
           <Link
             href="https://linkedin.com"
-            className="text-white/90 transition-colors hover:text-white"
+            className="text-gray-600 transition-colors hover:text-gray-900"
           >
             <span className="sr-only">LinkedIn</span>
             <svg
@@ -100,9 +100,9 @@ export default function Navbar() {
           whileTap={{ scale: 0.95 }}
         >
           {isOpen ? (
-            <X className="h-6 w-6 text-white" />
+            <X className="h-6 w-6 text-gray-800" />
           ) : (
-            <Menu className="h-6 w-6 text-white" />
+            <Menu className="h-6 w-6 text-gray-800" />
           )}
         </motion.button>
       </div>
@@ -115,12 +115,12 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="border-t border-white/10 bg-black/90 backdrop-blur-sm md:hidden"
+            className="border-t border-gray-200/20 bg-white/90 backdrop-blur-sm md:hidden"
           >
             <div className="flex flex-col space-y-4 p-4">
               <Link
                 href="/"
-                className="flex items-center text-sm text-white/90 transition-colors hover:text-white"
+                className="flex items-center text-sm text-gray-600 transition-colors hover:text-gray-900"
                 onClick={() => setIsOpen(false)}
               >
                 HOME
@@ -128,28 +128,28 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/pages"
-                className="text-sm text-white/90 transition-colors hover:text-white"
+                className="text-sm text-gray-600 transition-colors hover:text-gray-900"
                 onClick={() => setIsOpen(false)}
               >
                 PAGES
               </Link>
               <Link
                 href="/projects"
-                className="text-sm text-white/90 transition-colors hover:text-white"
+                className="text-sm text-gray-600 transition-colors hover:text-gray-900"
                 onClick={() => setIsOpen(false)}
               >
                 PROJECTS
               </Link>
               <Link
                 href="/blog"
-                className="text-sm text-white/90 transition-colors hover:text-white"
+                className="text-sm text-gray-600 transition-colors hover:text-gray-900"
                 onClick={() => setIsOpen(false)}
               >
                 BLOG
               </Link>
               <Link
                 href="/contact"
-                className="text-sm text-white/90 transition-colors hover:text-white"
+                className="text-sm text-gray-600 transition-colors hover:text-gray-900"
                 onClick={() => setIsOpen(false)}
               >
                 CONTACT
@@ -160,7 +160,7 @@ export default function Navbar() {
                 {/* Same social icons as desktop */}
                 <Link
                   href="https://linkedin.com"
-                  className="text-white/90 transition-colors hover:text-white"
+                  className="text-gray-600 transition-colors hover:text-gray-900"
                 >
                   <span className="sr-only">LinkedIn</span>
                   <svg
@@ -174,7 +174,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   href="https://facebook.com"
-                  className="text-white/90 transition-colors hover:text-white"
+                  className="text-gray-600 transition-colors hover:text-gray-900"
                 >
                   <span className="sr-only">Facebook</span>
                   <svg
@@ -188,7 +188,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   href="https://instagram.com"
-                  className="text-white/90 transition-colors hover:text-white"
+                  className="text-gray-600 transition-colors hover:text-gray-900"
                 >
                   <span className="sr-only">Instagram</span>
                   <svg
@@ -202,7 +202,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   href="https://twitter.com"
-                  className="text-white/90 transition-colors hover:text-white"
+                  className="text-gray-600 transition-colors hover:text-gray-900"
                 >
                   <span className="sr-only">Twitter</span>
                   <svg
